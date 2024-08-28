@@ -1,0 +1,13 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: UmbrellaLoader_ProcessedByFody
+// Assembly: UmbrellaLoader, Version=13.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 704CD7CC-C1AA-4E05-BDBF-D9D71A8ACA15
+// Assembly location: C:\Users\admin-pc\Desktop\UmbrellaLoader.exe
+
+#nullable disable
+internal class UmbrellaLoader_ProcessedByFody
+{
+  internal const string FodyVersion = "6.2.4.0";
+  internal const string PropertyChanged = "3.2.9.0";
+  internal const string Costura = "4.1.0.0";
+}

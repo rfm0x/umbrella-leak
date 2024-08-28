@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\admin-pc\Desktop\UmbrellaLoader.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BCDA5DA-EE31-4EF7-9701-FB52CABA5428}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>UmbrellaLoader</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>13.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>UmbrellaDesign</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_003CModule_003E.cs" />
+    <Compile Include="UmbrellaLoader_ProcessedByFody.cs" />
+    <Compile Include="Costura\AssemblyLoader.cs" />
+    <Compile Include="Customization.cs" />
+    <Compile Include="FileDeleter.cs" />
+    <Compile Include="Window1.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="forceDelete\LowLevelHandleHelper.cs" />
+    <Compile Include="forceDelete\NtStatus.cs" />
+    <Compile Include="forceDelete\SystemInformationClass.cs" />
+    <Compile Include="forceDelete\ObjectInformationClass.cs" />
+    <Compile Include="forceDelete\ProcessAccessRights.cs" />
+    <Compile Include="forceDelete\DuplicateHandleOptions.cs" />
+    <Compile Include="forceDelete\ApplicationType.cs" />
+    <Compile Include="forceDelete\SystemHandleEntry.cs" />
+    <Compile Include="forceDelete\UniqueProcess.cs" />
+    <Compile Include="forceDelete\ProcessInfo.cs" />
+    <Compile Include="forceDelete\NativeMethods.cs" />
+    <Compile Include="forceDelete\OpenFilesEnumerator.cs" />
+    <Compile Include="forceDelete\PathHelper.cs" />
+    <Compile Include="forceDelete\ProcessHandleSnapshot.cs" />
+    <Compile Include="forceDelete\SafeNativeHandle.cs" />
+    <Compile Include="forceDelete\SystemHelper.cs" />
+    <Compile Include="forceDelete\UsedFileDetector.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>mainwindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PromoModal.xaml.cs">
+      <DependentUpon>promomodal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fodyweavers.xml" />
+    <Resource Include="images\default_avatar.png" />
+    <Resource Include="images\exit.png" />
+    <Resource Include="images\key.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\logo_pc.png" />
+    <Resource Include="logo_umb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="costura.dll" />
+    <EmbeddedResource Include="costura\costura\dll.compressed" />
+    <EmbeddedResource Include="costura\fontawesome\wpf\dll.compressed" />
+    <EmbeddedResource Include="costura\httpprogress\dll.compressed" />
+    <EmbeddedResource Include="costura\ionic\zip\dll.compressed" />
+    <EmbeddedResource Include="costura\newtonsoft\json\dll.compressed" />
+    <EmbeddedResource Include="FontAwesome\WPF.dll" />
+    <EmbeddedResource Include="HttpProgress.dll" />
+    <EmbeddedResource Include="Ionic\Zip.dll" />
+    <EmbeddedResource Include="Newtonsoft\Json.dll" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="PropertyChanged.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="mainwindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="promomodal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="usercontrol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
